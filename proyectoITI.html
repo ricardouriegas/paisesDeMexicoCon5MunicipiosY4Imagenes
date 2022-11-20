@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Proyecto JavaScript</title>
+</head>
+<body style=" background: linear-gradient(90deg, rgba(64,78,219,1) 0%, rgba(0,0,0,0) 50%, rgba(64,78,219,1) 100%); background-color: black; font-family: sans-serif;">
+	<div align="center" oncontextmenu ="unhideMunicipio()" style="color: mintcream;">
+		<h1>¿Que estado deseas?</h1>
+		<hr>
+	</div>
+
+<div align="center">
+	<select id="estadoSeleccionado" onchange="unhideMunicipio()" >
+		<option disabled selected>Seleccione su estado</option>
+		<option value=0>Aguascalientes</option>
+		<option value=1>Baja California</option>
+		<option value=2>Baja California Sur</option>
+		<option value=3>Campeche</option>
+		<option value=4>Chiapas</option>
+		<option value=5>Chihuahua</option>
+		<option value=6>Coahuila</option>
+		<option value=7>Colima</option>
+		<option value=8>Ciudad de Mexico</option>
+		<option value=9>Durango</option>
+		<option value=10>Estado de Mexico</option>
+		<option value=11>Guanajuato</option>
+		<option value=12>Guerrero</option>
+		<option value=13>Hidalgo</option>
+		<option value=14>Jalisco</option>
+		<option value=15>Michoacan</option>
+		<option value=16>Morelos</option>
+		<option value=17>Nayarit</option>
+		<option value=18>Nuevo Leon</option>
+		<option value=19>Oaxaca</option>
+		<option value=20>Puebla</option>
+		<option value=21>Queretaro</option>
+		<option value=22>Quintana Roo</option>
+		<option value=23>San Luis Potosi</option>
+		<option value=24>Sinaloa</option>
+		<option value=25>Sonora</option>
+		<option value=26>Tabasco</option>
+		<option value=27>Tamaulipas</option>
+		<option value=28>Tlaxcala</option>
+		<option value=29>Veracruz</option>
+		<option value=30>Yucatan</option>
+		<option value=31>Zacatecas</option>
+	</select>
+	<br><br>
+
+
+	<!-- Municipios Aguascalientes -->
+	<select id=0 onchange="createTable()" hidden>
+		<option disabled selected>Seleccione su municipio</option>
+		<option value=0>Aguascalientes</option>
+		<option value=1>Asientos</option>
+		<option value=2>Calvillo</option>
+		<option value=3>Cosio</option>
+		<option value=4>Jesus Maria</option>
+	</select>
+
+
+	<!-- Municipios Baja California-->
+	<select id=1 onchange="createTable()" hidden>
+		<option disabled selected>Seleccione su municipio</option>
+		<option value=0>Ensenada</option>
+		<option value=1>Mexicali</option>
+		<option value=2>Tecate</option>
+		<option value=3>Tijuana</option>
+		<option value=4>Rosarito</option>
+	</select>
+	
+	
+	<!-- Municipios Baja California Sur -->
+	<select id=2 onchange="createTable()" hidden>
+		<option disabled selected>Seleccione su municipio</option>
+		<option value=0>Cabo San Lucas</option>
+		<option value=1>Ciudad Constitucion</option>
+		<option value=2>Guerrero Negro</option>
+		<option value=3>Heroica Mulege</option>
+		<option value=4>Ciudad de la Paz</option>
+	</select>
+	
+	
+	<!-- Municipios Campeche -->
+	<select id=3 onchange="createTable()" hidden>
+		<option disabled selected>Seleccione su municipio</option>
+		<option value=0>Campeche</option>
+		<option value=1>Carmen</option>
+		<option value=2>Champoton</option>
+		<option value=3>Escarcega</option>
+		<option value=4>Calkini</option>
+	</select>
+	
+	
+	<!-- Municipios Chiapas -->
+	<select id=4 onchange="createTable()" hidden>
+		<option disabled selected>Seleccione su municipio</option>
+		<option value=0>Tuxtla</option>
+		<option value=1>Tapachula</option>
+		<option value=2>San Cristobal de Las Casas</option>
+		<option value=3>Comitan de Dominguez</option>
+		<option value=4>Heroica Chiapa de Corzo</option>
+	</select>
+	
+	
+	<!-- Municipios Chihuahua -->
+	<select id=5 onchange="createTable()" hidden>
+		<option disabled selected>Seleccione su municipio</option>
+		<option value=0>Ahumada</option>
+		<option value=1>Aldama</option>
+		<option value=2>Allende</option>
+		<option value=3>Aquiles Serdan</option>
+		<option value=4>Ascension</option>
+	</select>
+	
+	
+	<!-- Municipios Coahuila -->
+	<select id=6 onchange="createTable()" hidden>
+		<option disabled selected>Seleccione su municipio</option>
+		<option value=0>Abasolo</option>
+		<option value=1>Acuña</option>
+		<option value=2>Allende</option>
+		<option value=3>Ateaga</option>
+		<option value=4>Candela</option>
+	</select>
+	
+	
+	<!-- Municipios Colima -->
+	<select id=7 onchange="createTable()" hidden>
+		<option disabled selected>Seleccione su municipio</option>
+		<option value=0>Armeria</option>
+		<option value=1>Colima</option>
+		<option value=2>Villa de Alvarez</option>
+		<option value=3>Minatitlan</option>
+		<option value=4>Tecoman</option>
+	</select>
+	
+	
+	<!-- Municipios Ciudad de mexico -->
+	<select id=8 onchange="createTable()" hidden>
+		<option disabled selected>Seleccione su municipio</option>
+		<option value=0>Ciudad de Mexico</option>
+	</select>
+	
+	
+	<!-- Municipios Durango -->
+	<select id=9 onchange="createTable()" hidden>
+		<option disabled selected>Seleccione su municipio</option>
+		<option value=0>Durango</option>
+		<option value=1>Gomez Palacios</option>
+		<option value=2>Lerdo</option>
+	</select>
+	
+	
+	<!-- Municipios Estado de Mexico -->
+	<select id=10 onchange="createTable()" hidden>
+		<option disabled selected>Seleccione su municipio</option>
+		<option value=0>Amecameca</option>
+		<option value=1>Ecatepec</option>
+		<option value=2>Ixtapan</option>
+		<option value=3>Naucalpan</option>
+		<option value=4>Texcoco</option>
+	</select>
+	
+	
+
+	<!-- Municipios Guanajuato -->
+	<select id=11 onchange="createTable()" hidden>
+		<option disabled selected>Seleccione su municipio</option>
+		<option value=0>Guanajuato</option>
+		<option value=1>Celaya</option>
+		<option value=2>Silao</option>
+		<option value=3>San Miguel de Allende</option>
+		<option value=4>Abasolo</option>
+	</select>
+	
+	
+	<!-- Municipios Guerrero -->
+	<select id=12 onchange="createTable()" hidden>
+		<option disabled selected>Seleccione su municipio</option>
+		<option value=0>Acapulco</option>
+		<option value=1>Chilpancingo</option>
+		<option value=2>Iguala</option>
+		<option value=3>Zihuatanejo</option>
+		<option value=4>Tlapa</option>
+	</select>
+	
+	
+	<!-- Municipios Hidalgo -->
+	<select id=13 onchange="createTable()" hidden>
+		<option disabled selected>Seleccione su municipio</option>
+		<option value=0>Pachuca de Soto</option>
+		<option value=1>Mineral de la Reforma</option>
+		<option value=2>Tulancingo de Bravo</option>
+		<option value=3>El Arenal</option>
+		<option value=4>Cardonal</option>
+	</select>
+	
+	
+	<!-- Municipios Jalisco -->
+	<select id=14 onchange="createTable()" hidden>
+		<option disabled selected>Seleccione su municipio</option>
+		<option value=0>Guadalajara</option>
+		<option value=1>Zapopan</option>
+		<option value=2>Tlaquepaque</option>
+		<option value=3>Tonala</option>
+		<option value=4>Puerto Vallarta</option>
+	</select>
+	
+	
+	<!-- Municipios Michoacan -->
+	<select id=15 onchange="createTable()" hidden>
+		<option disabled selected>Seleccione su municipio</option>
+		<option value=0>Morelia</option>
+		<option value=1>Uruapan</option>
+		<option value=2>Zamora</option>
+		<option value=3>Lazaro Cardenas</option>
+		<option value=4>Acuitzio</option>
+	</select>
+	
+	
+	<!-- Municipios Morelos -->
+	<select id=16 onchange="createTable()" hidden>
+		<option disabled selected>Seleccione su municipio</option>
+		<option value=0>Cuernavaca</option>
+		<option value=1>Mazatepec</option>
+		<option value=2>Temoac</option>
+		<option value=3>Ayala</option>
+		<option value=4>Axochiapan</option>
+	</select>
+	
+	
+	<!-- Municipios Nayarit -->
+	<select id=17 onchange="createTable()" hidden>
+		<option disabled selected>Seleccione su municipio</option>
+		<option value=0>San Pedro Lagunillas</option>
+		<option value=1>Compostela</option>
+		<option value=2>Jala</option>
+		<option value=3>Tepic</option>
+		<option value=4>Xalisco</option>
+	</select>
+	
+	
+	<!-- Municipios Nuevo Leon -->
+	<select id=18 onchange="createTable()" hidden>
+		<option disabled selected>Seleccione su municipio</option>
+		<option value=0>Monterrey</option>
+		<option value=1>Apodaca</option>
+		<option value=2>Juarez</option>
+		<option value=3>Garcia</option>
+		<option value=4>San Pedro Garza Garcia</option>
+	</select>
+	
+	
+	<!-- Municipios Oaxaca -->
+	<select id=19 onchange="createTable()" hidden>
+		<option disabled selected>Seleccione su municipio</option>
+		<option value=0>Oaxaca</option>
+		<option value=1>San Juan Butista Tuxtepec</option>
+		<option value=2>Heroica Ciudad de Juchitan de Zaragoza</option>
+		<option value=3>Salina Cruz</option>
+		<option value=4>Loma Bonita</option>
+	</select>
+	
+	
+	<!-- Municipios Puebla -->
+	<select id=20 onchange="createTable()" hidden>
+		<option disabled selected>Seleccione su municipio</option>
+		<option value=0>Heroica Puebla de Zaragoza</option>
+		<option value=1>Tehuacan</option>
+		<option value=2>Tezlutlan</option>
+		<option value=3>Cholula de Rivadavia</option>
+		<option value=4>Atlixco</option>
+	</select>
+	
+	
+	<!-- Municipios Queretaro -->
+	<select id=21 onchange="createTable()" hidden>
+		<option disabled selected>Seleccione su municipio</option>
+		<option value=0>San Juan del Rio</option>
+		<option value=1>Corregidora</option>
+		<option value=2>Queretaro</option>
+		<option value=3>Colon</option>
+		<option value=4>Toliman</option>
+	</select>
+	
+	
+	<!-- Municipios Quintana Roo -->
+	<select id=22 onchange="createTable()" hidden>
+		<option disabled selected>Seleccione su municipio</option>
+		<option value=0>Cancun</option>
+		<option value=1>Benito Juarez</option>
+		<option value=2>Puerto Morelos</option>
+		<option value=3>Tulum</option>
+		<option value=4>Lazaro Cardenas</option>
+	</select>
+	
+	
+	<!-- Municipios San Luis Potosi -->
+	<select id=23 onchange="createTable()" hidden>
+		<option disabled selected>Seleccione su municipio</option>
+		<option value=0>Moctezuma</option>
+		<option value=1>Salinas</option>
+		<option value=2>Vanegas</option>
+		<option value=3>Villa de Ramos</option>
+		<option value=4>El Naranjo</option>
+	</select>
+	
+	
+	<!-- Municipios Sinaloa -->
+	<select id=24 onchange="createTable()" hidden>
+		<option disabled selected>Seleccione su municipio</option>
+		<option value=0>Culiacan</option>
+		<option value=1>Los Mochis</option>
+		<option value=2>El Fuerte</option>
+		<option value=3>Guasave</option>
+		<option value=4>El Rosario</option>
+	</select>
+	
+	
+	<!-- Municipios Sonora -->
+	<select id=25 onchange="createTable()" hidden>
+		<option disabled selected>Seleccione su municipio</option>
+		<option value=0>Hermosillo</option>
+		<option value=1>Cajeme</option>
+		<option value=2>Nogales</option>
+		<option value=3>San Luis Rio Colorado</option>
+		<option value=4>Navojoa</option>
+	</select>
+	
+	
+	<!-- Municipios Tabasco -->
+	<select id=26 onchange="createTable()" hidden>
+		<option disabled selected>Seleccione su municipio</option>
+		<option value=0>Centro</option>
+		<option value=1>Cardenas</option>
+		<option value=2>Comalcalco</option>
+		<option value=3>Villahermosa</option>
+		<option value=4>Jalapa</option>
+	</select>
+	
+	
+	<!-- Municipios Tamaulipas -->
+	<select id=27 onchange="createTable()" hidden>
+		<option disabled selected>Seleccione su municipio</option>
+		<option value=0>Ciudad Victoria</option>
+		<option value=1>Reynosa</option>
+		<option value=2>Matamoros</option>
+		<option value=3>Soto La Marina</option>
+		<option value=4>Tampico</option>
+	</select>
+	
+	
+	<!-- Municipios Tlaxcala -->
+	<select id=28 onchange="createTable()" hidden>
+		<option disabled selected>Seleccione su municipio</option>
+		<option value=0>Tlaxcala</option>
+		<option value=1>Huamantla</option>
+		<option value=2>San Pablo del Monte</option>
+		<option value=3>Apizaco</option>
+		<option value=4>Amaxac</option>
+	</select>
+	
+	
+	<!-- Municipios Veracruz -->
+	<select id=29 onchange="createTable()" hidden>
+		<option disabled selected>Seleccione su municipio</option>
+		<option value=0>Veracruz</option>
+		<option value=1>Xalapa</option>
+		<option value=2>Coatzacoalcos</option>
+		<option value=3>Cordoba</option>
+		<option value=4>Poza Rica</option>
+	</select>
+	
+	
+	<!-- Municipios Yucatan -->
+	<select id=30 onchange="createTable()" hidden>
+		<option disabled selected>Seleccione su municipio</option>
+		<option value=0>Dzan</option>
+		<option value=1>Tekanto</option>
+		<option value=2>Ixil</option>
+		<option value=3>Izamal</option>
+		<option value=4>Celestun</option>
+	</select>
+	
+	
+	<!-- Municipios Zacatecas -->
+	<select id=31 onchange="createTable()" hidden>
+		<option disabled selected>Seleccione su municipio</option>
+		<option value=0>Fresnillo</option>
+		<option value=1>Guadalupe</option>
+		<option value=2>Zacatecas</option>
+		<option value=3>Apozol</option>
+		<option value=4>El Plateado</option>
+	</select>
+	<br>
+</div>
+<hr>
+	<div align="center">
+	<!-- Fotos Aguascalientes -->
+		<table id="table" hidden>
+			<tr>
+				<td>
+					<img id="img1" src="" style="border-radius: 0.50em; width: 45vw; height: 35vh;">
+				</td>
+				<td>
+					<img id="img2" src="" style="border-radius: 0.50em; width: 45vw; height: 35vh;">
+				</td>
+
+				<tr>
+			    	<td>
+			    		<img id="img3" src="" style="border-radius: 0.50em; width: 45vw; height: 35vh;">
+			    	</td>
+					<td>
+						<img id="img4" src="" style="border-radius: 0.50em; width: 45vw; height: 35vh;">
+					</td>
+			    </tr>
+			</tr>
+		</table>
+	</div>
+
+	<!-- Script para mostrar imagenes, etc -->
+
+	<script type="text/javascript">
+		
+		//every time selectEstado change
+		function unhideMunicipio() {
+			var selectEstado = document.getElementById("estadoSeleccionado").options[estadoSeleccionado.selectedIndex].value;
+			//array municipios que debe contener todos los select de los municipios
+			var municipios = new Array();
+			//obtener todos los selects y guardarlos en el array municipios[]
+			for (var i = 0; i <= 31; i++) {
+				municipios[i] = document.getElementById(i);
+			}
+			//for para ocultar todo 
+			for (var i = 0; i <= 31; i++) {
+				municipios[i].setAttribute("hidden", true);
+			}
+			//mostrar el select correspondiente
+			for (var i = 0; i <= 31; i++) {
+				switch (parseInt(selectEstado)) {
+				case i: municipios[i].removeAttribute("hidden");
+				}
+			}
+			
+		}
+
+
+		function createTable(argument) {
+			var img1 = document.getElementById("img1");
+			var img2 = document.getElementById("img2");
+			var img3 = document.getElementById("img3");
+			var img4 = document.getElementById("img4");
+
+			var estado = document.getElementById("estadoSeleccionado").options[estadoSeleccionado.selectedIndex].value;; 
+			estado = parseInt(estado);
+			var municipio = new Array();
+
+			for (var i = 0; i <= 31; i++) {
+				municipio[i] = document.getElementById(i);
+			}
+
+			for (var i = 0; i < municipio.length; i++) {
+				//tomar solo los valores seleccionados
+				if (!isNaN(municipio[i].options[municipio[i].selectedIndex].value)) {
+					var municipioSeleccionado = municipio[i].options[municipio[i].selectedIndex].value
+				}
+			}
+
+			img1.src = "./imagenes/" + estado + "/" + municipioSeleccionado + "/1.jpg";
+			img2.src = "./imagenes/" + estado + "/" + municipioSeleccionado + "/2.jpg";
+			img3.src = "./imagenes/" + estado + "/" + municipioSeleccionado + "/3.jpg";
+			img4.src = "./imagenes/" + estado + "/" + municipioSeleccionado + "/4.jpg";
+
+			var table = document.getElementById("table");
+
+			table.removeAttribute("hidden");
+
+						  
+		}
+	</script>
+
+	<!-- Style off the page -->
+	<style type="text/css">
+		/* <select> styles */
+		select {
+		  /* Reset */
+		  appearance: none;
+		  border: 0;
+		  outline: 0;
+		  font: inherit;
+
+		  /* Personalize */
+		  width: 20em;
+		  height: 3em;
+		  padding: 0 4em 0 1em;
+		  background-color: beige;
+		  color: black;
+		  border-radius: 0.25em;
+		  box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
+		  cursor: pointer;
+
+		  option {
+		      color: inherit;
+		      background-color: $option;
+		    }
+		    /* Remove focus outline */
+		      &:focus {
+		        outline: none;
+		      }
+		      /* Remove IE arrow */
+		      &::-ms-expand {
+		        display: none;
+		      }
+		}
+	</style>
+</body>
+</html>
