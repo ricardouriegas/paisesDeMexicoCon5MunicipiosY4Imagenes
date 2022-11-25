@@ -49,7 +49,6 @@
 	</select>
 	<br><br>
 
-
 	<!-- Municipios Aguascalientes -->
 	<select id=0 onchange="createTable()" hidden>
 		<option disabled selected>Seleccione su municipio</option>
@@ -59,7 +58,6 @@
 		<option value=3>Cosio</option>
 		<option value=4>Jesus Maria</option>
 	</select>
-
 
 	<!-- Municipios Baja California-->
 	<select id=1 onchange="createTable()" hidden>
@@ -71,7 +69,6 @@
 		<option value=4>Rosarito</option>
 	</select>
 	
-	
 	<!-- Municipios Baja California Sur -->
 	<select id=2 onchange="createTable()" hidden>
 		<option disabled selected>Seleccione su municipio</option>
@@ -81,7 +78,6 @@
 		<option value=3>Heroica Mulege</option>
 		<option value=4>Ciudad de la Paz</option>
 	</select>
-	
 	
 	<!-- Municipios Campeche -->
 	<select id=3 onchange="createTable()" hidden>
@@ -93,7 +89,6 @@
 		<option value=4>Calkini</option>
 	</select>
 	
-	
 	<!-- Municipios Chiapas -->
 	<select id=4 onchange="createTable()" hidden>
 		<option disabled selected>Seleccione su municipio</option>
@@ -103,7 +98,6 @@
 		<option value=3>Comitan de Dominguez</option>
 		<option value=4>Heroica Chiapa de Corzo</option>
 	</select>
-	
 	
 	<!-- Municipios Chihuahua -->
 	<select id=5 onchange="createTable()" hidden>
@@ -115,7 +109,6 @@
 		<option value=4>Ascension</option>
 	</select>
 	
-	
 	<!-- Municipios Coahuila -->
 	<select id=6 onchange="createTable()" hidden>
 		<option disabled selected>Seleccione su municipio</option>
@@ -125,7 +118,6 @@
 		<option value=3>Ateaga</option>
 		<option value=4>Candela</option>
 	</select>
-	
 	
 	<!-- Municipios Colima -->
 	<select id=7 onchange="createTable()" hidden>
@@ -137,13 +129,15 @@
 		<option value=4>Tecoman</option>
 	</select>
 	
-	
 	<!-- Municipios Ciudad de mexico -->
 	<select id=8 onchange="createTable()" hidden>
 		<option disabled selected>Seleccione su municipio</option>
 		<option value=0>Ciudad de Mexico</option>
+		<option value=1>Azcapotzalco</option>
+		<option value=2>Miguel Hidalgo</option>
+		<option value=3>Xochimilco</option>
+		<option value=4>Milpa</option>
 	</select>
-	
 	
 	<!-- Municipios Durango -->
 	<select id=9 onchange="createTable()" hidden>
@@ -151,8 +145,9 @@
 		<option value=0>Durango</option>
 		<option value=1>Gomez Palacios</option>
 		<option value=2>Lerdo</option>
+		<option value=3>Guadalupe Victoria</option>
+		<option value=4>Hidalgo</option>
 	</select>
-	
 	
 	<!-- Municipios Estado de Mexico -->
 	<select id=10 onchange="createTable()" hidden>
@@ -163,8 +158,6 @@
 		<option value=3>Naucalpan</option>
 		<option value=4>Texcoco</option>
 	</select>
-	
-	
 
 	<!-- Municipios Guanajuato -->
 	<select id=11 onchange="createTable()" hidden>
@@ -399,7 +392,7 @@
 </div>
 <hr>
 	<div align="center">
-	<!-- Fotos Aguascalientes -->
+	<!-- Fotos -->
 		<table id="table" hidden>
 			<tr>
 				<td>
@@ -444,40 +437,62 @@
 				case i: municipios[i].removeAttribute("hidden");
 				}
 			}
+			//reiniciar imagenes
+			var img1 = document.getElementById("img1");
+			var img2 = document.getElementById("img2");
+			var img3 = document.getElementById("img3");
+			var img4 = document.getElementById("img4");
+			vaciarImagenes(img1, img2, img3, img4);
+
+			//ocultar imagenes
+			var table = document.getElementById("table");
+			table.setAttribute("hidden", true);
 			
 		}
 
+		function vaciarImagenes(img1, img2, img3, img4) {
+			img1.src = "";
+			img2.src = "";
+			img3.src = "";
+			img4.src = "";
+		}
+		function ocultarTabla() {
+			var table = document.getElementById("table");
 
-		function createTable(argument) {
+			table.removeAttribute("hidden");	
+		}
+
+		function createTable() {
 			var img1 = document.getElementById("img1");
 			var img2 = document.getElementById("img2");
 			var img3 = document.getElementById("img3");
 			var img4 = document.getElementById("img4");
 
-			var estado = document.getElementById("estadoSeleccionado").options[estadoSeleccionado.selectedIndex].value;; 
+			vaciarImagenes(img1, img2, img3, img4);
+
+			var estado = document.getElementById("estadoSeleccionado").options[estadoSeleccionado.selectedIndex].value;
 			estado = parseInt(estado);
 			var municipio = new Array();
 
+			//obtener select de los municipios
 			for (var i = 0; i <= 31; i++) {
-				municipio[i] = document.getElementById(i);
+				municipio[i] = document.getElementById(i).value;
 			}
+
 
 			for (var i = 0; i < municipio.length; i++) {
 				//tomar solo los valores seleccionados
-				if (!isNaN(municipio[i].options[municipio[i].selectedIndex].value)) {
-					var municipioSeleccionado = municipio[i].options[municipio[i].selectedIndex].value
+				switch (parseInt(estado)) {
+				case i: 
+					img1.src = "./imagenes/" + estado + "/" + municipio[i] + "/1.jpg";
+					img2.src = "./imagenes/" + estado + "/" + municipio[i] + "/2.jpg";
+					img3.src = "./imagenes/" + estado + "/" + municipio[i] + "/3.jpg";
+					img4.src = "./imagenes/" + estado + "/" + municipio[i] + "/4.jpg";
+					console.log("Municipio: ", municipio[i], "\n");
 				}
 			}
 
-			img1.src = "./imagenes/" + estado + "/" + municipioSeleccionado + "/1.jpg";
-			img2.src = "./imagenes/" + estado + "/" + municipioSeleccionado + "/2.jpg";
-			img3.src = "./imagenes/" + estado + "/" + municipioSeleccionado + "/3.jpg";
-			img4.src = "./imagenes/" + estado + "/" + municipioSeleccionado + "/4.jpg";
-
-			var table = document.getElementById("table");
-
-			table.removeAttribute("hidden");
-
+			ocultarTabla();
 						  
 		}
 	</script>
