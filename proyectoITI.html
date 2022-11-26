@@ -490,10 +490,8 @@
 					img4.src = "./imagenes/" + estado + "/" + municipio[i] + "/4.jpg";
 					console.log("Municipio: ", municipio[i], "\n");
 				}
-			}
-
-			ocultarTabla();
-						  
+			} 
+			ocultarTabla();		  
 		}
 	</script>
 
@@ -502,9 +500,6 @@
 		/* <select> styles */
 		select {
 		  /* Reset */
-		  appearance: none;
-		  border: 0;
-		  outline: 0;
 		  font: inherit;
 
 		  /* Personalize */
@@ -513,22 +508,10 @@
 		  padding: 0 4em 0 1em;
 		  background-color: beige;
 		  color: black;
-		  border-radius: 0.25em;
-		  box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
+		  border-radius: 0.75em;
+		  box-shadow: 0 0 1em 0 rgb(53, 52, 52);
 		  cursor: pointer;
-
-		  option {
-		      color: inherit;
-		      background-color: $option;
-		    }
-		    /* Remove focus outline */
-		      &:focus {
-		        outline: none;
-		      }
-		      /* Remove IE arrow */
-		      &::-ms-expand {
-		        display: none;
-		      }
+		 
 		}
 	</style>
 </body>
